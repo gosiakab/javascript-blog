@@ -1,0 +1,30 @@
+{
+  "name": "javascript-blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "init-project": "npm install && npm run init:dirs && npm run init:files",
+    "init:dirs": "mkdirp sass css vendor images js",
+    "init:files": "touch README.md index.html sass/style.scss js/script.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gosiakab/javascript-blog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gosiakab/javascript-blog/issues"
+  },
+  "homepage": "https://github.com/gosiakab/javascript-blog#readme",
+  "devDependencies": {
+    "autoprefixer-cli": "^1.0.0",
+    "browser-sync": "^2.26.7",
+    "html-validate": "^2.23.0",
+    "mkdirp": "^1.0.4"
+  },
+  "dependencies": {}
+}
