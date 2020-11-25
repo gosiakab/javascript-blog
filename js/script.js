@@ -38,11 +38,15 @@
   
   /* find the correct article using the selector (value of 'href' attribute) */
  
-    const targetArticle = document.querySelector("href");
+    const targetArticle = document.querySelector(articleSelector);
     console.log("Clicked: ", targetArticle);
   /* add class 'active' to the correct article */
 
     targetArticle.classList.add("active");
     console.log("Correct article clicked!")   
   }
-    
+  const links = document.querySelectorAll('.titles a');
+
+  for(let link of links){
+    link.addEventListener('click', titleClickHandler);
+  }
