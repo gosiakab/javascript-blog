@@ -139,12 +139,12 @@ function generateTags() {
 
     /* START LOOP: for each tag */
     for (let tag of articleTagsArray) {
-      console.log("Split for each tag!", tag);
+      console.log("Split for each tag:", tag);
 
       /* generate HTML of the link */
 
       let linkHTML =
-        '<li><a href="#tag-' + tag + '"> <span>' + tag + " </span></a></li>";
+        '<li><a href="#tag-' + tag + '"> <span>' + tag + "</span></a></li>";
       console.log("HTML created!", linkHTML);
 
       /* add generated code to html variable */
@@ -237,6 +237,7 @@ function addClickListenersToTags() {
 }
 
 addClickListenersToTags();
+
 const optArticleAuthorSelector = ".post-author .list";
 function generateAuthors() {
   /* find all articles */
@@ -258,7 +259,7 @@ function generateAuthors() {
     /* generate HTML of the link */
 
     let linkHTML =
-      '<li><a href="#author-' +
+      '<li> <a href="#author-' +
       author +
       '"> <span>' +
       author +
@@ -268,11 +269,11 @@ function generateAuthors() {
     /* add generated code to html variable */
 
     html = html + linkHTML;
-  }
-  authorsWrapper.innerHTML = html;
-  console.log(html);
-}
 
+    authorsWrapper.innerHTML = html;
+    console.log(html);
+  }
+}
 generateAuthors();
 
 function authorClickHandler(event) {
@@ -412,4 +413,4 @@ function calculateTagsParams() {
   generateTags();
 }
 
-calculateTagsParams();
+/*calculateTagsParams();*/
