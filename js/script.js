@@ -200,7 +200,7 @@ function tagClickHandler(event) {
 
   /* find all tag links with "href" attribute equal to the "href" constant */
 
-  const tagLinks = article.querySelector(href);
+  const tagLinks = document.querySelectorAll('a[href="' + href + '"]');
   console.log("Found: ", tagLinks);
 
   /* START LOOP: for each found tag link */
@@ -290,7 +290,7 @@ function authorClickHandler(event) {
   /* find all author links with class active */
 
   const activeAuthorLinks = document.querySelectorAll(
-    'a.active[href^="#tag-author-"]'
+    'a.active[href^="#author-"]'
   );
   console.log("Active author found!", activeAuthorLinks);
 
@@ -307,7 +307,7 @@ function authorClickHandler(event) {
 
   /* find all tag links with "href" attribute equal to the "href" constant */
 
-  const authorLinks = article.querySelector(href);
+  const authorLinks = document.querySelectorAll('a[href="' + href + '"]');
   console.log("Found: ", authorLinks);
 
   /* START LOOP: for each found author link */
@@ -329,7 +329,7 @@ function authorClickHandler(event) {
 function addClickListenersToAuthors() {
   /* find all links to authors */
 
-  const links = document.querySelectorAll('a[href^="#tag-author-"]');
+  const links = document.querySelectorAll('a[href^="#author-"]');
   console.log("All author links found!");
 
   /* START LOOP: for each link */
@@ -352,82 +352,81 @@ addClickListenersToAuthors();
 //const params = Math.max(0, Math.min(999999));
 
 //function calculateTagsParams(tags) {
-  //function calculateTagClass(count, params) {
-    //function generateTags() {
-      /* [NEW] create a new variable allTags with an empty object */
-      //let allTags = {};
+//function calculateTagClass(count, params) {
+//function generateTags() {
+/* [NEW] create a new variable allTags with an empty object */
+//let allTags = {};
 
-      /* find all articles */
+/* find all articles */
 
-      /* START LOOP: for every article: */
+/* START LOOP: for every article: */
 
-      /* find tags wrapper */
+/* find tags wrapper */
 
-      /* make html variable with empty string */
+/* make html variable with empty string */
 
-      /* get tags from data-tags attribute */
+/* get tags from data-tags attribute */
 
-      /* split tags into array */
+/* split tags into array */
 
-      /* START LOOP: for each tag */
+/* START LOOP: for each tag */
 
-      /* generate HTML of the link */
+/* generate HTML of the link */
 
-      /* add generated code to html variable */
+/* add generated code to html variable */
 
-      /* [NEW] check if this link is NOT already in allTags */
-      //if (!allTags[tag]) {
-        /* [NEW] add generated code to allTags object */
-        //allTags[tag] = 1;
-      //} else {
-       // allTags[tag]++;
-      //}
+/* [NEW] check if this link is NOT already in allTags */
+//if (!allTags[tag]) {
+/* [NEW] add generated code to allTags object */
+//allTags[tag] = 1;
+//} else {
+// allTags[tag]++;
+//}
 
-      /* END LOOP: for each tag */
+/* END LOOP: for each tag */
 
-      /* insert HTML of all the links into the tags wrapper */
+/* insert HTML of all the links into the tags wrapper */
 
-      /* END LOOP: for every article: */
+/* END LOOP: for every article: */
 
-      /* [NEW] find list of tags in right column */
-      //const tagList = document.querySelector(".tags");
+/* [NEW] find list of tags in right column */
+//const tagList = document.querySelector(".tags");
 
-      //const tagsParams = calculateTagsParams(allTags);
-      //console.log("tagsParams:", tagsParams);
+//const tagsParams = calculateTagsParams(allTags);
+//console.log("tagsParams:", tagsParams);
 
-      //for (let tag in tags) {
-        //console.log(tag + " is used " + tags[tag] + " times");
-        //if (tags[tag] > params.max) {
-          //params.max = tags[tag];
-       // } else if (tags[tag] < params.min) {
-        //  params.min = tags[tag];
-        //}
-     // }
-      /* [NEW] create variable for all links HTML code */
-      //let allTagsHTML = "";
+//for (let tag in tags) {
+//console.log(tag + " is used " + tags[tag] + " times");
+//if (tags[tag] > params.max) {
+//params.max = tags[tag];
+// } else if (tags[tag] < params.min) {
+//  params.min = tags[tag];
+//}
+// }
+/* [NEW] create variable for all links HTML code */
+//let allTagsHTML = "";
 
-      /* [NEW] START LOOP: for each tag in allTags: */
-      //for (let tag in allTags) {
-        /* [NEW] generate code of a link and add it to allTagsHTML */
-        //allTagsHTML +=
-          //'<li><a href="#tag-' +
-          //tag +
-         // '"> <span>' +
-         // tag +
-         // "</span></a></li>(" +
-         // allTags[tag] +
-         // ")";
-        //console.log("All tags html created!", allTagsHTML);
-     // }
-      /* [NEW] END LOOP: for each tag in allTags: */
+/* [NEW] START LOOP: for each tag in allTags: */
+//for (let tag in allTags) {
+/* [NEW] generate code of a link and add it to allTagsHTML */
+//allTagsHTML +=
+//'<li><a href="#tag-' +
+//tag +
+// '"> <span>' +
+// tag +
+// "</span></a></li>(" +
+// allTags[tag] +
+// ")";
+//console.log("All tags html created!", allTagsHTML);
+// }
+/* [NEW] END LOOP: for each tag in allTags: */
 
-      /*[NEW] add HTML from allTagsHTML to tagList */
-     // tagList.innerHTML = allTagsHTML;
-    //}
+/*[NEW] add HTML from allTagsHTML to tagList */
+// tagList.innerHTML = allTagsHTML;
+//}
 
-    generateTags();
-  //}
-  //calculateTagClass(count, params);
-  //return params;
+//}
+//calculateTagClass(count, params);
+//return params;
 //}
 //calculateTagsParams(tags);
