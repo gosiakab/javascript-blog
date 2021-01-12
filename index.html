@@ -53,7 +53,7 @@
               class="post"
               id="article-2"
               data-tags="schedule motivation"
-              data-author="James Clear"
+              data-author="Tim O'Connor"
             >
               <h3 class="post-title">Create on a schedule</h3>
               <p class="post-author"></p>
@@ -90,7 +90,7 @@
               class="post"
               id="article-3"
               data-tags="process creativity routine"
-              data-author="James Clear"
+              data-author="Gerry Donovan"
             >
               <h3 class="post-title">Finish something</h3>
               <p class="post-author"></p>
@@ -121,7 +121,7 @@
               class="post"
               id="article-4"
               data-tags="self-criticism practice creativity"
-              data-author="James Clear"
+              data-author="Niall Harris"
             >
               <h3 class="post-title">Stop judging your own work</h3>
               <p class="post-author"></p>
@@ -161,7 +161,7 @@
               class="post"
               id="article-5"
               data-tags="creativity feedback"
-              data-author="James Clear"
+              data-author="Rob O'Brian"
             >
               <h3 class="post-title">Hold yourself accountable</h3>
               <p class="post-author"></p>
@@ -197,7 +197,7 @@
               class="post"
               id="article-6"
               data-tags="journey creative"
-              data-author="James Clear"
+              data-author="John Murray"
             >
               <h3 class="post-title">How to Find Your Creative Genius</h3>
               <p class="post-author"></p>
@@ -221,7 +221,7 @@
               class="post"
               id="article-7"
               data-tags="work routine"
-              data-author="James Clear"
+              data-author="Ger O'Shea"
             >
               <h3 class="post-title">
                 Is There Such a Thing as ‘Naturally Creative'?
@@ -259,7 +259,7 @@
               class="post"
               id="article-8"
               data-tags="development creativity journey"
-              data-author="James Clear"
+              data-author="Alan Creedon"
             >
               <h3 class="post-title">
                 Creative Thinking: Destiny or Development?
@@ -315,7 +315,7 @@
               class="post"
               id="article-9"
               data-tags="thoughts talent"
-              data-author="James Clear"
+              data-author="Olan Crowley"
             >
               <h3 class="post-title">Intelligence and Creative Thinking</h3>
               <p class="post-author"></p>
@@ -347,7 +347,7 @@
               class="post"
               id="article-10"
               data-tags="growth creativity development consistency"
-              data-author="James Clear"
+              data-author="Tommy Buckley"
             >
               <h3 class="post-title">Growth Mindset</h3>
               <p class="post-author"></p>
@@ -392,6 +392,47 @@
         </main>
       </div>
     </div>
+    <script id="template-article-link" type="text/x-handlebars-template">
+      <li>
+        <a href="#{{id}}">
+          <span>
+            {{title}}
+          </span>
+        </a>
+      </li>
+    </script>
+    <script id="template-articleTag-link" type="text/x-handlebars-template">
+      <li>
+        <a href="#tag-{{name}}">
+          {{name}}
+        </a>
+      </li>
+    </script>
+    <script id="template-articleAuthor-link" type="text/x-handlebars-template">
+      <a href="#author-{{name}}">
+        {{title}}
+      </a>
+    </script>
+
+    <script id="template-tagCloud-link" type="text/x-handlebars-template">
+      {{#each tags}}
+        <li>
+          <a href="#tag-{{tag}}" class="{{className}}">
+            {{tag}} ({{count}})
+          </a>
+        </li>
+      {{/each}}
+    </script>
+    <script id="template-authorCloud-link" type="text/x-handlebars-template">
+      {{#each authors}}
+        <li>
+          <a href="#author-{{author}}" class="author-name">
+            {{author}} ({{count}})
+          </a>
+        </li>
+      {{/each}}
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
